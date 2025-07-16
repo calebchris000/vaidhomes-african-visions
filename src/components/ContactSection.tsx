@@ -50,7 +50,7 @@ export default function ContactSection() {
       icon: MapPin,
       title: "Location",
       detail: "Lagos, Nigeria",
-      action: "#",
+      action: "#contact",
     },
   ];
 
