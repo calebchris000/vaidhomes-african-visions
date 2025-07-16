@@ -22,7 +22,7 @@ export default function InvestorSection() {
     {
       icon: Target,
       title: "Equity Offering",
-      value: "20% - 40%",
+      value: "15% - 20%",
       description: "Competitive equity stake",
       color: "text-orange-african",
     },
@@ -236,17 +236,19 @@ export default function InvestorSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl" className="group">
-              <Download className="w-5 h-5 mr-2" />
-              Download Investor Deck
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
             <Button
-              variant="outline"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#contact")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+              variant="hero"
               size="xl"
-              className="border-white/30 text-white bg-white/10 hover:bg-white/20"
+              className="group"
             >
-              Schedule Investment Call
+              Let's Get Started{" "}
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
 

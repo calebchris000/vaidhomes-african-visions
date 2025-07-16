@@ -6,7 +6,7 @@ export default function TeamSection() {
     name: "Victor Etim",
     role: "Founder & CEO",
     quote:
-      "From carton paper to commanding skylines — our story is Made in Africa.",
+      "I started with carton paper from my mother’s provision store. Today, I’m helping build Africa — one model, one home at a time.",
     image: "[Victor Etim Photo Placeholder]",
     description:
       "Visionary leader driving Africa's architectural model-making revolution with over a decade of experience in real estate development.",
@@ -20,7 +20,7 @@ export default function TeamSection() {
       role: "Business Development Manager",
       experience: "5+ years",
       specialty: "Client Relations & Market Expansion",
-      image: "[Joshua Etim Photo Placeholder]",
+      image: "",
       linkedin: "",
       email: "",
     },
@@ -29,7 +29,7 @@ export default function TeamSection() {
       role: "Chief Accountant",
       experience: "7+ years",
       specialty: "Financial Management & Strategy",
-      image: "[Uyime Ekpo Photo Placeholder]",
+      image: "",
       linkedin: "",
       email: "",
     },
@@ -38,7 +38,7 @@ export default function TeamSection() {
       role: "Senior Civil Engineer",
       experience: "10+ years",
       specialty: "Project Supervision & Infrastructure",
-      image: "[Emmanuel Ntia Photo Placeholder]",
+      image: "",
       linkedin: "",
       email: "",
     },
@@ -47,7 +47,7 @@ export default function TeamSection() {
       role: "Surveyor & GIS Analyst",
       experience: "8+ years",
       specialty: "Land Surveying & Geospatial Analysis",
-      image: "[Iwueze Shallon Photo Placeholder]",
+      image: "",
       linkedin: "",
       email: "",
     },
@@ -57,7 +57,7 @@ export default function TeamSection() {
       role: "Real Estate Attorney",
       experience: "10+ years",
       specialty: "Legal Affairs & Property Law",
-      image: "[Jeremiah Aneji Photo Placeholder]",
+      image: "",
       linkedin: "",
       email: "",
     },
@@ -66,7 +66,7 @@ export default function TeamSection() {
       role: "Senior Quantity Surveyor",
       experience: "15+ years",
       specialty: "Cost Management & Estimation",
-      image: "[Ifiok Okosi Photo Placeholder]",
+      image: "",
       linkedin: "",
       email: "",
     },
@@ -75,7 +75,6 @@ export default function TeamSection() {
   return (
     <section id="team" className="py-20 bg-gradient-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             The Team
@@ -86,16 +85,25 @@ export default function TeamSection() {
           </p>
         </div>
 
-        {/* Founder Spotlight */}
         <div className="mb-20">
           <div className="max-w-4xl mx-auto bg-card rounded-3xl shadow-premium overflow-hidden">
             <div className="grid md:grid-cols-2 gap-0">
-              {/* Image */}
               <div className="h-80 md:h-auto bg-muted flex items-center justify-center text-muted-foreground">
-                {founder.image}
+                <img
+                  className="hidden"
+                  onLoad={(e) => {
+                    (e.target as HTMLElement).style.display = "block";
+                  }}
+                  src={founder.image}
+                />
+                <span className="font-bold text-6xl">
+                  {founder.name
+                    .split(" ")
+                    .map((i) => i.charAt(0).toUpperCase())
+                    .join("")}
+                </span>
               </div>
 
-              {/* Content */}
               <div className="p-8 md:p-12 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <Award className="w-6 h-6 text-gold-rich" />
@@ -149,12 +157,24 @@ export default function TeamSection() {
               key={index}
               className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-premium transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Image */}
               <div className="h-48 bg-muted rounded-xl flex items-center justify-center text-muted-foreground mb-6 overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                {member.image}
+                <span className="font-bold text-6xl">
+                  <img
+                    className="hidden"
+                    onLoad={(e) => {
+                      (e.target as HTMLElement).style.display = "block";
+                    }}
+                    src={founder.image}
+                  />
+                  <span>
+                    {member.name
+                      .split(" ")
+                      .map((i) => i.charAt(0).toUpperCase())
+                      .join("")}
+                  </span>
+                </span>
               </div>
 
-              {/* Content */}
               <div className="text-center">
                 <h4 className="text-xl font-bold text-card-foreground mb-2">
                   {member.name}
@@ -186,7 +206,6 @@ export default function TeamSection() {
           ))}
         </div>
 
-        {/* Team Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
@@ -218,7 +237,6 @@ export default function TeamSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-6">
             Ready to work with Africa's leading architectural team?

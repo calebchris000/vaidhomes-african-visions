@@ -8,40 +8,42 @@ export default function ServicesOverview() {
       icon: Building2,
       title: "Architectural Models",
       description:
-        "Precision-crafted physical miniatures designed and built locally — not imported. From urban planning to residential complexes.",
+        "As pioneers, we craft meticulously detailed, visually stunning architectural models, including Banjul's largest city model (2021), to elevate properties and showcase investment potential.",
       features: [
-        "High-fidelity miniatures",
-        "Local production",
-        "Urban planning models",
-        "Residential prototypes",
+        "Landmark City Models (Banjul, 2021)",
+        "High-Fidelity & Visually Stunning",
+        "Driving Property Impact & Sales",
+        "Showcasing Investment Potential",
       ],
-      image: images.model03,
+      image: images.model01,
     },
     {
       icon: Hammer,
-      title: "Modern Apartment Construction",
+      title: "Grand Scale Architectural Models",
       description:
-        "Expertly managed construction of contemporary multi-storey residential buildings, featuring clean lines, spacious balconies, and integrated landscaping. We deliver turnkey solutions from foundation to finishing, ensuring every detail meets modern standards.",
+        "We crafted a monumental, Emirates-inspired architectural model, over 1.65m tall, for a luxury brand client. This ambitious project was brought to life through our unwavering commitment, exceeding all expectations.",
       features: [
-        "Multi-storey residential expertise",
-        "Contemporary architectural style",
-        "Spacious balconies & natural light",
-        "Turnkey project delivery",
+        "Life-sized Model (>1.65m Tall)",
+        "Emirates-Inspired Grandeur",
+        "Luxury Brand Client Focus",
+        "Unwavering Project Realization",
+        "Exceeded Expectations & Client Satisfaction",
       ],
-      image: images.image1,
+      image: images.model02,
     },
     {
       icon: Home,
-      title: "Luxury Villa Residences",
+      title: "Master-Planned Community Models",
       description:
-        "Modern, architect-designed villas featuring sleek facades, expansive windows, private parking, and lush landscaping. Ideal for upscale living in a serene, gated community.",
+        "We craft expansive, highly detailed master-planned community models that bring complex urban visions to life. Meticulously representing large residential developments with housing, illuminated road networks, and realistic terrain, these models are invaluable tools for planners, developers, and investors, offering immersive visualization of future communities.",
       features: [
-        "Contemporary architecture",
-        "Private parking spaces",
-        "Landscaped surroundings",
-        "Spacious interiors & balconies",
+        "Comprehensive Community Layouts",
+        "Detailed Residential & Infrastructure Design",
+        "Realistic Terrain & Landscaping",
+        "Integrated Illumination for Realism",
+        "Ideal for Urban Planning & Sales Visualization",
       ],
-      image: images.image3,
+      image: images.model18,
     },
   ];
 
@@ -89,7 +91,12 @@ export default function ServicesOverview() {
               </ul>
 
               <div className="w-full h-48 bg-muted rounded-xl my-8 mt-12 flex items-center justify-center text-muted-foreground">
-                <img src={service.image} alt={service.description} />
+                <img
+                  style={{ filter: "contrast(140%)" }}
+                  src={service.image}
+                  className="w-full aspect-[16/9] object-cover"
+                  alt={service.description}
+                />
               </div>
 
               <Button variant="outline" className="group w-full">
@@ -101,10 +108,10 @@ export default function ServicesOverview() {
         </div>
 
         <div className="text-center mt-16">
-          <Button variant="cta" size="xl">
+          {/* <Button variant="cta" size="xl">
             View All Our Projects
             <ArrowRight className="w-5 h-5" />
-          </Button>
+          </Button> */}
         </div>
       </div>
     </section>

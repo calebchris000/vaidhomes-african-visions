@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -9,14 +9,16 @@ import {
   TrendingUp,
 } from "lucide-react";
 import heroImage from "@/assets/hero-models.jpg";
+import { gsap } from "gsap";
 
 export default function HeroSection() {
   const [currentStat, setCurrentStat] = useState(0);
+  const heroImageRef = useRef(null);
 
   const stats = [
     { value: "100+", label: "Projects Completed", icon: Building2 },
     { value: "₦100M+", label: "Contract Revenue", icon: TrendingUp },
-    { value: "10+", label: "States & 2 Countries", icon: Globe },
+    { value: "10+", label: "States & 3 African Countries", icon: Globe },
     { value: "20+", label: "Trusted Organizations", icon: Users },
   ];
 
@@ -26,6 +28,26 @@ export default function HeroSection() {
     }, 3000);
     return () => clearInterval(interval);
   }, [stats.length]);
+
+  useEffect(() => {
+    if (heroImageRef.current) {
+      const tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 0 });
+
+      tl.to(heroImageRef.current, {
+        scale: 2,
+        duration: 4,
+        ease: "back",
+      }).to(heroImageRef.current, {
+        scale: 1.5,
+        duration: 4,
+        ease: "back",
+      });
+
+      return () => {
+        tl.kill();
+      };
+    }
+  }, []);
 
   return (
     <section
@@ -37,6 +59,7 @@ export default function HeroSection() {
           src={heroImage}
           alt="VaidHomes Architectural Models"
           className="w-full h-full object-cover"
+          ref={heroImageRef}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/70 to-navy-deep/50" />
       </div>

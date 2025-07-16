@@ -1,8 +1,16 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Filter, ArrowRight, MapPin, Calendar, User } from "lucide-react";
+import {
+  Filter,
+  ArrowRight,
+  MapPin,
+  Calendar,
+  User,
+  ZoomIn,
+} from "lucide-react";
 import { images } from "@/assets/images/image";
 import { useNavigate } from "react-router-dom";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function ProjectShowcase() {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -12,152 +20,153 @@ export default function ProjectShowcase() {
     { id: "all", label: "All Projects" },
     { id: "models", label: "Architectural Models" },
     { id: "construction", label: "Construction" },
-    { id: "shortlets", label: "Shortlet Rentals" },
   ];
 
   const projects = [
     {
       id: 1,
-      title: "Modern Multi-Story Building with Terracotta Accents",
-      category: "construction",
+      title: "Marriott Hotel Architectural Model",
+      category: "models",
       location: "Lagos, Nigeria",
       year: "2024",
-      client: "Private Developer",
+      client: "Vaidhomes and Models",
       description:
-        "A striking multi-story residential or mixed-use building featuring a clean white facade complemented by vertical sections of warm terracotta-toned cladding. The modern design incorporates private balconies with transparent railings, vertical window elements, and a well-integrated ground floor with shaded parking, set amidst lush green landscaping.",
-      image: images.image1,
+        "An intricately detailed 1:500 scale architectural model of a modern Marriott hotel complex, measuring 1200x2400 units, showcasing multiple interconnected buildings, lush landscaping, miniature vehicles, and illuminated elements. This highly realistic model provides a comprehensive view of the hotel's design, including its external facade, recreational areas, and surrounding infrastructure. Produced by Vaidhomes and Models over 3 weeks, it highlights precision and attention to detail in architectural visualization.",
+      images: [images.model04],
       featured: true,
     },
     {
       id: 2,
-      title: "Contemporary Residential Building with Patterned Facade",
-      category: "construction",
+      title: "Illuminated Luxury Residential Estate Model",
+      category: "models",
       location: "Lagos, Nigeria",
       year: "2024",
-      client: "Private Developer",
+      client: "Vaidhomes and Models",
       description:
-        "A contemporary multi-story building featuring a clean white facade and distinctive vertical sections of decorative patterned screens in a warm beige/brown tone. The modern design includes private balconies with clear glass railings, elongated vertical window elements, and a functional ground floor with integrated parking, all surrounded by green landscaping under a clear sky.",
-      image: images.image2,
-      featured: true,
+        "An intricately detailed and illuminated architectural model of a luxury residential estate, featuring multiple contemporary homes, a winding road with miniature vehicles, and lush landscaping. This model serves as a powerful testament to the impact of precision visualization in real estate, enabling developers to present their properties with unparalleled clarity and drive significant sales. It embodies the 'real men' approach to luxury branding, transcending mere sketches to bring dreams to life, affirming that superior presentation is key to establishing a formidable brand.",
+      images: [images.model06],
+      featured: false,
     },
     {
       id: 3,
-      title: "Contemporary Angled Facade Residences",
-      category: "construction",
+      title: "Detailed Illuminated Residential Estate Model",
+      category: "models",
       location: "Lagos, Nigeria",
       year: "2024",
       client: "VaidHomes",
       description:
-        "A sophisticated residential complex showcasing modern architectural design with distinctive angular dark grey facades and contrasting light grey sections. The buildings feature bold vertical screen elements, expansive windows, and ample shaded parking, harmoniously integrated within a landscaped environment, offering a premium urban living experience.",
-      image: images.image3,
-      featured: true,
+        "An extensive and highly detailed architectural model showcasing a modern residential estate. This illuminated model features numerous multi-story homes with distinctive dark roofs and light facades, a meticulously designed street layout with miniature vehicles, and vibrant landscaping including palm trees and streetlights. The glowing interiors and streetlights bring the miniature community to life, highlighting the planned ambiance and layout of the development.",
+      images: [images.model08],
+      featured: false,
     },
     {
       id: 4,
-      title: "Serene Urban Residential Complex",
-      category: "construction",
+      title: "Extensive Illuminated Urban Model",
+      category: "models",
       location: "Lagos, Nigeria",
       year: "2024",
       client: "VaidHomes",
       description:
-        "An elegant multi-story residential complex showcasing modern design with contrasting dark and light grey facades. The architecture features prominent vertical screen elements and large windows, harmoniously integrated within a lush, well-landscaped environment. Ample parking, including contemporary vehicles, and mature palm trees contribute to a serene and sophisticated urban living experience.",
-      image: images.image4,
+        "A sophisticated, illuminated architectural model showcasing a well-planned urban residential complex. This detailed model, featuring multiple buildings, intricate road networks, and integrated lighting, is crucial for demonstrating strong project commitment and aiding investor confidence. It vividly illustrates the project's layout and design, fostering credibility and ensuring clarity for all stakeholders.",
+      images: [images.model09],
+      featured: true,
+    },
+    {
+      id: 6,
+      title: "The Leonardo By Sujimoto Architectural Model",
+      category: "models",
+      location: "Banana Island, Lagos, Nigeria",
+      year: "2024",
+      client: "Sujimoto",
+      description:
+        "An architectural model of The Leonardo By Sujimoto, a luxury residential development inspired by the 16th-century Italian artist, Leonardo da Vinci. Located in Africa's most exclusive neighbourhood, Banana Island, this project merges Sujimoto's renowned quality with an affordable price and unmatched finishing, offering 2, 3, and 4-bedroom residences.",
+      images: [images.model11],
       featured: false,
     },
     {
       id: 5,
-      title: "Residential Estate Development",
-      category: "construction",
-      location: "Abuja, Nigeria",
-      year: "2023",
-      client: "Private Developer",
+      title: "TAF City Architectural Model",
+      category: "models",
+      location: "TAF City, The Gambia",
+      year: "2021",
+      client: "TAF Africa Global",
       description:
-        "Complete project supervision for 50-unit residential estate with modern amenities.",
-      image: images.image12,
+        "Created in 2021, this detailed architectural model of TAF City, The Gambia, remains a key tool for visitor engagement and subscriptions. It vividly showcases the progress of the largest and one of the greenest cities in Africa. The model was recently utilized by Mr. Mustapha Njie, MD of TAF Africa Global, to tour the Hon. Baboucarr Ousmaila Joof, Minister of Trade, Industry, Regional Integration and Employment, and delegates. Model by Vaidhomes and Models.",
+      images: [images.model12],
       featured: false,
     },
-    {
-      id: 6,
-      title: "Creative Studio Shortlet",
-      category: "shortlets",
-      location: "Ikeja, Lagos",
-      year: "2024",
-      client: "VaidHomes",
-      description:
-        "Designer shortlet space optimized for creative professionals with workspace and living areas.",
-      image: images.image5,
-      featured: false,
-    },
+
     {
       id: 7,
-      title: "Urban Farming Initiative",
-      category: "agriculture",
+      title: "Maryam Court Architectural Model",
+      category: "models",
       location: "Lagos, Nigeria",
-      year: "2023",
-      client: "Local Community",
+      year: "2022",
+      client: "Livitikal Realties",
       description:
-        "Community-driven urban farming project providing fresh produce and education.",
-      image: images.image7,
-      featured: false,
+        "An illuminated architectural model of the 'Maryam Court' residential building, meticulously displayed in Lagos, Nigeria. This detailed model showcases a multi-story building with illuminated windows, intricate surrounding landscapes, and miniature vehicles on a road, highlighting the planned ambiance and layout. Its continued display by Livitikal Realties underscores the lasting quality and effectiveness of our models in real estate visualization and sales.",
+      images: [images.model13, images.model14, images.model15],
+      featured: true,
     },
     {
       id: 8,
-      title: "Eco-Friendly Living",
-      category: "sustainability",
+      title: "Residential Home Architectural Model",
+      category: "models",
       location: "Abuja, Nigeria",
-      year: "2022",
-      client: "Green Initiative",
+      year: "2024",
+      client: "Vaidhomes and Models",
       description:
-        "Sustainable living project promoting eco-friendly practices and green spaces.",
-      image: images.image8,
+        "A meticulously crafted architectural model of a modern single-family home, showcasing a distinctive red roof, white facades with red trim around windows, a lush green lawn, and a paved driveway with a miniature red car. The model's intricate details, including subtle lighting and landscaping, exemplify precision visualization, offering a tangible and highly realistic representation of a prospective residence.",
+      images: [images.model17],
       featured: false,
     },
     {
       id: 9,
-      title: "Renewable Energy Solutions",
-      category: "sustainability",
-      location: "Kigali, Rwanda",
-      year: "2021",
-      client: "Renewable Energy Agency",
+      title: "18th Africa International Housing Show Model",
+      category: "models",
+      location: "Abuja, Nigeria",
+      year: "2024",
+      client: "Listo Construction (Modeled by Vaidhomes)",
       description:
-        "Solar panel installation and energy efficiency initiatives.",
-      image: images.image9,
+        "An architectural model exhibited at the 18th Africa International Housing Show, held at the Abuja International Stadium. This stunning model was showcased by Listo Construction and proudly crafted and modeled by Vaidhomes, highlighting precision and innovation in architectural visualization.",
+      images: [images.model18],
       featured: false,
     },
     {
       id: 10,
-      title: "Urban Green Spaces",
-      category: "sustainability",
-      location: "Lagos, Nigeria",
-      year: "2022",
-      client: "Urban Development Agency",
+      title: "Levita & Primestack Project Model",
+      category: "models",
+      location: "Abuja, Nigeria",
+      year: "2024",
+      client: "Primestack & Levita",
       description:
-        "Initiatives to create and maintain green spaces in urban areas.",
-      image: images.image10,
+        "A meticulously crafted architectural model for Primestack and Levita, highlighting the enduring value and indispensable role of physical models in design evaluation and conveying project authenticity.",
+      images: [images.model19],
       featured: false,
     },
     {
       id: 11,
-      title: "Modern Urban High-Rise",
-      category: "construction",
-      location: "Lagos, Nigeria",
+      title: "Primestack for Levita Architectural Model",
+      category: "models",
+      location: "Abuja, Nigeria",
       year: "2024",
-      client: "VaidHomes",
+      client: "Primestack & Levita",
       description:
-        "A striking multi-story residential complex featuring contemporary architecture, private balconies with integrated planters, and a rooftop pool. The design incorporates elegant dark and light facades with distinctive patterned screens, set within a lush urban landscape with ample parking.",
-      image: images.image11,
+        "This architectural model for Primestack and Levita demonstrates the enduring power of physical models in design evaluation, conveying confidence, depth, and genuine project dedication.",
+      images: [images.model20, images.model22],
       featured: false,
     },
+
     {
       id: 12,
-      title: "Contemporary Residential Complex",
+      title: "Maryam Court: From Model to Reality",
       category: "construction",
-      location: "Lagos, Nigeria",
+      location: "Victoria Island, Lagos, Nigeria",
       year: "2024",
-      client: "VaidHomes",
+      client: "Livitikal Realties",
       description:
-        "A modern and upscale residential complex featuring sophisticated multi-story buildings with dark grey and white facades, integrated vertical screen elements, and large windows. The design emphasizes contemporary aesthetics, complemented by lush green landscaping, mature palm trees, and ample parking, creating a serene and exclusive urban living environment.",
-      image: images.image10,
+        "Our prototype model for Maryam Court, created two years ago, has successfully evolved into this stunning real-world development.",
+      images: [images.image1],
       featured: false,
     },
   ];
@@ -194,17 +203,45 @@ export default function ProjectShowcase() {
                 key={project.id}
                 className="group relative bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-500 hover:-translate-y-2"
               >
-                <div className="h-64 bg-muted flex items-center justify-center text-muted-foreground relative overflow-hidden">
-                  <img src={project.image} alt={project.title} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="flex items-center gap-2 text-sm mb-2">
-                      <User className="w-4 h-4" />
-                      <span>{project.client}</span>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <div className="h-64 bg-muted flex items-center justify-center text-muted-foreground relative overflow-hidden cursor-pointer group">
+                      <img
+                        src={project.images[0]}
+                        alt={project.title}
+                        className="object-cover w-full h-full"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                      <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="flex items-center gap-2 text-sm mb-2">
+                          <User className="w-4 h-4" />
+                          <span>{project.client}</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-[100vw] h-[100vh] p-4 flex flex-col overflow-hidden">
+                    <h4 className="text-xl font-bold text-card-foreground mb-4">
+                      {project.title}
+                    </h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center flex-grow overflow-y-auto">
+                      {project.images.map((imgSrc, index) => (
+                        <div
+                          key={index}
+                          className="flex items-center justify-center"
+                        >
+                          <img
+                            src={imgSrc}
+                            alt={`${project.title} - Image ${index + 1}`}
+                            className="rounded-lg"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </DialogContent>
+                </Dialog>
 
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
@@ -256,13 +293,40 @@ export default function ProjectShowcase() {
               key={project.id}
               className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-premium transition-all duration-300"
             >
-              <div className="h-48 bg-muted flex items-center justify-center text-muted-foreground relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="object-cover w-full h-full"
-                />
-              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div className="h-48 bg-muted flex items-center justify-center text-muted-foreground relative overflow-hidden cursor-pointer">
+                    <img
+                      style={{ filter: "contrast(140%)" }}
+                      src={project.images[0]}
+                      alt={project.title}
+                      className="object-cover w-full h-full"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                      <ZoomIn className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    </div>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-[100vw] h-[100vh] p-4 flex flex-col overflow-hidden">
+                  <h4 className="text-xl font-bold text-card-foreground mb-4">
+                    {project.title}
+                  </h4>
+                  <div className="flex gap-4 place-items-center flex-grow overflow-y-auto">
+                    {project.images.map((imgSrc, index) => (
+                      <div
+                        key={index}
+                        className="h-[35vh] flex items-center justify-center"
+                      >
+                        <img
+                          src={imgSrc}
+                          alt={`${project.title} - Image ${index + 1}`}
+                          className=" object-contain rounded-lg"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </DialogContent>
+              </Dialog>
 
               <div className="p-6">
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
@@ -283,9 +347,6 @@ export default function ProjectShowcase() {
                   <span className="text-xs text-orange-african font-medium">
                     {project.client}
                   </span>
-                  {/* <Button variant="ghost" size="sm">
-                    <ArrowRight className="w-4 h-4" />
-                  </Button> */}
                 </div>
               </div>
             </div>
