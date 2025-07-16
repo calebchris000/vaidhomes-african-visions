@@ -1,57 +1,74 @@
-import { Linkedin, Mail, Award, Calendar } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Linkedin, Mail, Award, Calendar } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function TeamSection() {
   const founder = {
-    name: 'Victor Etim',
-    role: 'Founder & CEO',
-    quote: 'From carton paper to commanding skylines — our story is Made in Africa.',
-    image: '[Victor Etim Photo Placeholder]',
-    description: 'Visionary leader driving Africa\'s architectural model-making revolution with over a decade of experience in real estate development.',
+    name: "Victor Etim",
+    role: "Founder & CEO",
+    quote:
+      "From carton paper to commanding skylines — our story is Made in Africa.",
+    image: "[Victor Etim Photo Placeholder]",
+    description:
+      "Visionary leader driving Africa's architectural model-making revolution with over a decade of experience in real estate development.",
+    linkedin: "https://www.linkedin.com/in/victor-etim-a28423231/",
+    email: "Victor@vaidhomes.com",
   };
 
   const teamMembers = [
     {
-      name: 'Uyime Ekpo',
-      role: 'Chief Accountant',
-      experience: '7+ years',
-      specialty: 'Financial Management & Strategy',
-      image: '[Uyime Ekpo Photo Placeholder]',
+      name: "Joshua Etim",
+      role: "Business Development Manager",
+      experience: "5+ years",
+      specialty: "Client Relations & Market Expansion",
+      image: "[Joshua Etim Photo Placeholder]",
+      linkedin: "",
+      email: "",
     },
     {
-      name: 'Emmanuel Ntia',
-      role: 'Senior Civil Engineer',
-      experience: '10+ years',
-      specialty: 'Project Supervision & Infrastructure',
-      image: '[Emmanuel Ntia Photo Placeholder]',
+      name: "Uyime Ekpo",
+      role: "Chief Accountant",
+      experience: "7+ years",
+      specialty: "Financial Management & Strategy",
+      image: "[Uyime Ekpo Photo Placeholder]",
+      linkedin: "",
+      email: "",
     },
     {
-      name: 'Iwueze Shallon',
-      role: 'Surveyor & GIS Analyst',
-      experience: '8+ years',
-      specialty: 'Land Surveying & Geospatial Analysis',
-      image: '[Iwueze Shallon Photo Placeholder]',
+      name: "Emmanuel Ntia",
+      role: "Senior Civil Engineer",
+      experience: "10+ years",
+      specialty: "Project Supervision & Infrastructure",
+      image: "[Emmanuel Ntia Photo Placeholder]",
+      linkedin: "",
+      email: "",
     },
     {
-      name: 'Joshua Etim',
-      role: 'Business Development Manager',
-      experience: '5+ years',
-      specialty: 'Client Relations & Market Expansion',
-      image: '[Joshua Etim Photo Placeholder]',
+      name: "Iwueze Shallon",
+      role: "Surveyor & GIS Analyst",
+      experience: "8+ years",
+      specialty: "Land Surveying & Geospatial Analysis",
+      image: "[Iwueze Shallon Photo Placeholder]",
+      linkedin: "",
+      email: "",
+    },
+
+    {
+      name: "Barr. Jeremiah Aneji",
+      role: "Real Estate Attorney",
+      experience: "10+ years",
+      specialty: "Legal Affairs & Property Law",
+      image: "[Jeremiah Aneji Photo Placeholder]",
+      linkedin: "",
+      email: "",
     },
     {
-      name: 'Barr. Jeremiah Aneji',
-      role: 'Real Estate Attorney',
-      experience: '10+ years',
-      specialty: 'Legal Affairs & Property Law',
-      image: '[Jeremiah Aneji Photo Placeholder]',
-    },
-    {
-      name: 'Ifiok Okosi',
-      role: 'Senior Quantity Surveyor',
-      experience: '15+ years',
-      specialty: 'Cost Management & Estimation',
-      image: '[Ifiok Okosi Photo Placeholder]',
+      name: "Ifiok Okosi",
+      role: "Senior Quantity Surveyor",
+      experience: "15+ years",
+      specialty: "Cost Management & Estimation",
+      image: "[Ifiok Okosi Photo Placeholder]",
+      linkedin: "",
+      email: "",
     },
   ];
 
@@ -64,7 +81,8 @@ export default function TeamSection() {
             The Team
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Meet the experts building Africa's architectural future with decades of combined experience
+            Meet the experts building Africa's architectural future with decades
+            of combined experience
           </p>
         </div>
 
@@ -99,11 +117,23 @@ export default function TeamSection() {
                 </p>
 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm">
+                  <Button
+                    onClick={() => {
+                      window.open(founder.linkedin, "_blank");
+                    }}
+                    variant="outline"
+                    size="sm"
+                  >
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </Button>
-                  <Button variant="outline" size="sm">
+                  <Button
+                    onClick={() => {
+                      window.open(`mailto:${founder.email}`);
+                    }}
+                    variant="outline"
+                    size="sm"
+                  >
                     <Mail className="w-4 h-4 mr-2" />
                     Contact
                   </Button>
@@ -113,7 +143,6 @@ export default function TeamSection() {
           </div>
         </div>
 
-        {/* Team Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div
@@ -160,20 +189,32 @@ export default function TeamSection() {
         {/* Team Stats */}
         <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">60+</div>
-            <div className="text-muted-foreground">Years Combined Experience</div>
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              60+
+            </div>
+            <div className="text-muted-foreground">
+              Years Combined Experience
+            </div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">6</div>
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              6
+            </div>
             <div className="text-muted-foreground">Core Specialists</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">100%</div>
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              100%
+            </div>
             <div className="text-muted-foreground">African Expertise</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">5+</div>
-            <div className="text-muted-foreground">Professional Disciplines</div>
+            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+              5+
+            </div>
+            <div className="text-muted-foreground">
+              Professional Disciplines
+            </div>
           </div>
         </div>
 

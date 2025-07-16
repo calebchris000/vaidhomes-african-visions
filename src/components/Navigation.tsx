@@ -20,7 +20,6 @@ export default function Navigation() {
     { name: "Our Work", href: "#showcase", icon: Eye },
     { name: "Team", href: "#team", icon: Users },
     { name: "Investors", href: "#investors", icon: TrendingUp },
-    { name: "Contact", href: "#contact", icon: Phone },
   ];
 
   return (
@@ -34,7 +33,7 @@ export default function Navigation() {
             </div>
           </div>
 
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-5">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -45,7 +44,13 @@ export default function Navigation() {
                 {item.name}
               </a>
             ))}
-            <Button variant="hero" size="sm">
+            <Button
+              onClick={() => {
+                window.location.href = "#contact";
+              }}
+              variant="hero"
+              size="sm"
+            >
               Get Started
               <ChevronRight />
             </Button>
