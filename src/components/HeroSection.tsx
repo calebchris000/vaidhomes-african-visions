@@ -8,12 +8,11 @@ import {
   Globe,
   TrendingUp,
 } from "lucide-react";
-import heroImage from "@/assets/hero-models.jpg";
-import { gsap } from "gsap";
+import heroVideo from "@/assets/videos/hero-video.mp4";
 
 export default function HeroSection() {
   const [currentStat, setCurrentStat] = useState(0);
-  const heroImageRef = useRef(null);
+  const videoRef = useRef(null);
 
   const stats = [
     { value: "100+", label: "Projects Completed", icon: Building2 },
@@ -30,22 +29,8 @@ export default function HeroSection() {
   }, [stats.length]);
 
   useEffect(() => {
-    if (heroImageRef.current) {
-      const tl = gsap.timeline({ repeat: -1, yoyo: true, delay: 0 });
-
-      tl.to(heroImageRef.current, {
-        scale: 2,
-        duration: 4,
-        ease: "back",
-      }).to(heroImageRef.current, {
-        scale: 1.5,
-        duration: 4,
-        ease: "back",
-      });
-
-      return () => {
-        tl.kill();
-      };
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.3;
     }
   }, []);
 
@@ -55,11 +40,14 @@ export default function HeroSection() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="VaidHomes Architectural Models"
+        <video
+          src={heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover"
-          ref={heroImageRef}
+          ref={videoRef}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-navy-deep/90 via-navy-deep/70 to-navy-deep/50" />
       </div>
