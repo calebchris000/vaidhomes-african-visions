@@ -64,11 +64,31 @@ export default function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button variant="hero" size="xl" className="group">
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#showcase")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+              variant="hero"
+              size="xl"
+              className="group"
+            >
               See Our Work
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="premium" size="xl" className="group">
+            <Button
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .querySelector("#contact")
+                  .scrollIntoView({ behavior: "smooth" });
+              }}
+              variant="premium"
+              size="xl"
+              className="group"
+            >
               <Play className="w-5 h-5 mr-2" />
               Partner With Us
             </Button>

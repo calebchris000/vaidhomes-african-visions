@@ -37,7 +37,12 @@ export default function Navigation() {
             {navItems.map((item) => (
               <a
                 key={item.name}
-                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  document
+                    .querySelector(item.href)
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
                 className="text-foreground hover:text-primary transition-smooth flex items-center gap-2 py-2 px-3 rounded-md hover:bg-muted/50"
               >
                 <item.icon className="w-4 h-4" />
@@ -72,23 +77,35 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden py-4 border-t border-border bg-background/95 backdrop-blur-sm">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => (
                 <a
                   key={item.name}
-                  href={item.href}
+                  onClick={(e) => {
+                    setIsOpen(false);
+                    e.preventDefault();
+                    document
+                      .querySelector(item.href)
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
                   className="flex items-center gap-3 px-4 py-3 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-smooth"
-                  onClick={() => setIsOpen(false)}
                 >
                   <item.icon className="w-5 h-5" />
                   {item.name}
                 </a>
               ))}
               <div className="px-4 pt-2">
-                <Button variant="hero" className="w-full">
+                <Button
+                  onClick={(e) => {
+                    document
+                      .querySelector("#contact")
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
+                  variant="hero"
+                  className="w-full"
+                >
                   Get Started
                 </Button>
               </div>

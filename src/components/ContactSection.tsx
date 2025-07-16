@@ -267,11 +267,23 @@ export default function ContactSection() {
             Prefer a different way to reach us?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" className="group">
+            <Button
+              onClick={(e) => {
+                window.open("tel:+2347037476267");
+              }}
+              variant="outline"
+              className="group"
+            >
               <Phone className="w-4 h-4 mr-2" />
               Schedule a Call
             </Button>
-            <Button variant="outline" className="group">
+            <Button
+              onClick={(e) => {
+                window.open("mailto:Victor@vaidhomes.com");
+              }}
+              variant="outline"
+              className="group"
+            >
               <Mail className="w-4 h-4 mr-2" />
               Send Direct Email
             </Button>

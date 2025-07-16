@@ -39,16 +39,23 @@ export default function Footer() {
     { icon: Phone, text: "+234 703 747 6267", href: "tel:+2347037476267" },
     {
       icon: Mail,
-      text: "vaidhomes123@gmail.com",
-      href: "mailto:vaidhomes123@gmail.com",
+      text: "Victor@vaidhomes.com",
+      href: "mailto:Victor@vaidhomes.com",
     },
     { icon: MapPin, text: "Lagos, Nigeria", href: "#" },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "#", name: "LinkedIn" },
-    { icon: Instagram, href: "#", name: "Instagram" },
-    { icon: Youtube, href: "#", name: "YouTube" },
+    {
+      icon: Linkedin,
+      href: "vhttps://www.linkedin.com/company/vaidhomes-and-models/",
+      name: "LinkedIn",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/vaidhomes/",
+      name: "Instagram",
+    },
   ];
 
   return (

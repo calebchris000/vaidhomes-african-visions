@@ -297,7 +297,12 @@ export default function ProjectShowcase() {
             Want to see more of our work or discuss your project?
           </p>
           <a
-            href="#contact"
+            onClick={(e) => {
+              e.preventDefault();
+              document
+                .querySelector("#contact")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
             className="bg-orange-500 p-4 px-5 font-medium text-white flex w-fit mx-auto items-center rounded-lg gap-2 hover:bg-orange-400 transition-all hover:-translate-y-2"
           >
             Start Your Project
