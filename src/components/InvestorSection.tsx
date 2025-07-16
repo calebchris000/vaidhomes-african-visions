@@ -1,64 +1,85 @@
-import { Button } from '@/components/ui/button';
-import { TrendingUp, DollarSign, Globe, Target, Download, ArrowRight, BarChart3, PieChart } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import {
+  TrendingUp,
+  DollarSign,
+  Globe,
+  Target,
+  Download,
+  ArrowRight,
+  BarChart3,
+  PieChart,
+} from "lucide-react";
 
 export default function InvestorSection() {
   const opportunityStats = [
     {
       icon: DollarSign,
-      title: 'Investment Range',
-      value: '$50M - $100M',
-      description: 'Seeking strategic investment',
-      color: 'text-gold-rich'
+      title: "Investment Range",
+      value: "$50M - $100M",
+      description: "Seeking strategic investment",
+      color: "text-gold-rich",
     },
     {
       icon: Target,
-      title: 'Equity Offering',
-      value: '20% - 40%',
-      description: 'Competitive equity stake',
-      color: 'text-orange-african'
+      title: "Equity Offering",
+      value: "20% - 40%",
+      description: "Competitive equity stake",
+      color: "text-orange-african",
     },
     {
       icon: Globe,
-      title: 'Market Size',
-      value: '$1.4T',
-      description: 'African real estate by 2025',
-      color: 'text-primary'
+      title: "Market Size",
+      value: "$1.4T",
+      description: "African real estate by 2025",
+      color: "text-primary",
     },
     {
       icon: BarChart3,
-      title: 'Housing Gap',
-      value: '20-28M',
-      description: 'Units needed in Nigeria',
-      color: 'text-navy-light'
-    }
+      title: "Housing Gap",
+      value: "20-28M",
+      description: "Units needed in Nigeria",
+      color: "text-navy-light",
+    },
   ];
 
   const useOfFunds = [
-    { item: 'Land Acquisition', percentage: 40, amount: '$20M - $40M' },
-    { item: 'Housing Construction', percentage: 35, amount: '$17.5M - $35M' },
-    { item: 'HQ Development', percentage: 15, amount: '$7.5M - $15M' },
-    { item: 'Operations & Marketing', percentage: 10, amount: '$5M - $10M' }
+    { item: "Land Acquisition", percentage: 40, amount: "$20M - $40M" },
+    { item: "Housing Construction", percentage: 35, amount: "$17.5M - $35M" },
+    { item: "HQ Development", percentage: 15, amount: "$7.5M - $15M" },
+    { item: "Operations & Marketing", percentage: 10, amount: "$5M - $10M" },
   ];
 
   const roadmapItems = [
     {
-      phase: 'Phase 1',
-      timeline: '6 Months',
-      title: 'Infrastructure Setup',
-      items: ['Launch model-making HQ in Lagos/Abuja', 'Acquire prime land for development', 'Establish production facilities']
+      phase: "Phase 1",
+      timeline: "6 Months",
+      title: "Infrastructure Setup",
+      items: [
+        "Launch model-making HQ in Lagos/Abuja",
+        "Acquire prime land for development",
+        "Establish production facilities",
+      ],
     },
     {
-      phase: 'Phase 2',
-      timeline: '12 Months',
-      title: 'Team Expansion',
-      items: ['Train first cohort of apprentices (5-10 hires)', 'Expand client base to 20+ organizations', 'Launch digital platform relaunch']
+      phase: "Phase 2",
+      timeline: "12 Months",
+      title: "Team Expansion",
+      items: [
+        "Train first cohort of apprentices (5-10 hires)",
+        "Expand client base to 20+ organizations",
+        "Launch digital platform relaunch",
+      ],
     },
     {
-      phase: 'Phase 3',
-      timeline: '18 Months',
-      title: 'Market Expansion',
-      items: ['Launch 5-10 furnished shortlet units', 'Expand to additional West African countries', 'Achieve profitability milestone']
-    }
+      phase: "Phase 3",
+      timeline: "18 Months",
+      title: "Market Expansion",
+      items: [
+        "Launch 5-10 furnished shortlet units",
+        "Expand to additional West African countries",
+        "Achieve profitability milestone",
+      ],
+    },
   ];
 
   return (
@@ -74,7 +95,8 @@ export default function InvestorSection() {
             Join Africa's Real Estate Revolution
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Partner with VaidHomes to capture the $1.4 trillion African real estate opportunity while addressing the continent's housing deficit
+            Partner with VaidHomes to capture the $1.4 trillion African real
+            estate opportunity while addressing the continent's housing deficit
           </p>
         </div>
 
@@ -86,7 +108,9 @@ export default function InvestorSection() {
               className="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover:bg-white/15 transition-all duration-300"
             >
               <stat.icon className={`w-8 h-8 mx-auto mb-4 ${stat.color}`} />
-              <div className="text-2xl md:text-3xl font-bold mb-2">{stat.value}</div>
+              <div className="text-2xl md:text-3xl font-bold mb-2">
+                {stat.value}
+              </div>
               <div className="text-lg font-semibold mb-1">{stat.title}</div>
               <div className="text-gray-400 text-sm">{stat.description}</div>
             </div>
@@ -104,23 +128,33 @@ export default function InvestorSection() {
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold">Nigeria Housing Demand</span>
-                  <span className="text-orange-african font-bold">500K+ units/year</span>
+                  <span className="text-orange-african font-bold">
+                    500K+ units/year
+                  </span>
                 </div>
-                <p className="text-gray-400 text-sm">Annual new housing requirement to meet growing demand</p>
+                <p className="text-gray-400 text-sm">
+                  Annual new housing requirement to meet growing demand
+                </p>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold">Lagos Population Growth</span>
-                  <span className="text-gold-rich font-bold">275K+ annually</span>
+                  <span className="text-gold-rich font-bold">
+                    275K+ annually
+                  </span>
                 </div>
-                <p className="text-gray-400 text-sm">New residents requiring housing solutions</p>
+                <p className="text-gray-400 text-sm">
+                  New residents requiring housing solutions
+                </p>
               </div>
               <div className="bg-white/10 rounded-xl p-6">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold">Local Model Production</span>
                   <span className="text-red-400 font-bold">&lt;1%</span>
                 </div>
-                <p className="text-gray-400 text-sm">Percentage of architectural models made locally in Africa</p>
+                <p className="text-gray-400 text-sm">
+                  Percentage of architectural models made locally in Africa
+                </p>
               </div>
             </div>
           </div>
@@ -135,11 +169,13 @@ export default function InvestorSection() {
                 <div key={index} className="bg-white/10 rounded-xl p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-semibold">{fund.item}</span>
-                    <span className="text-white font-bold">{fund.percentage}%</span>
+                    <span className="text-white font-bold">
+                      {fund.percentage}%
+                    </span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2 mb-2">
-                    <div 
-                      className="bg-gradient-accent h-2 rounded-full" 
+                    <div
+                      className="bg-gradient-accent h-2 rounded-full"
                       style={{ width: `${fund.percentage}%` }}
                     />
                   </div>
@@ -156,7 +192,7 @@ export default function InvestorSection() {
             <Target className="w-8 h-8 text-orange-african" />
             18-Month Expansion Plan
           </h3>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {roadmapItems.map((phase, index) => (
               <div
@@ -164,14 +200,21 @@ export default function InvestorSection() {
                 className="bg-white/10 backdrop-blur-md rounded-2xl p-6 relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-accent" />
-                
-                <div className="text-orange-african font-bold text-sm mb-2">{phase.phase}</div>
+
+                <div className="text-orange-african font-bold text-sm mb-2">
+                  {phase.phase}
+                </div>
                 <div className="text-2xl font-bold mb-2">{phase.title}</div>
-                <div className="text-gray-400 text-sm mb-4">{phase.timeline}</div>
-                
+                <div className="text-gray-400 text-sm mb-4">
+                  {phase.timeline}
+                </div>
+
                 <ul className="space-y-2">
                   {phase.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start gap-2 text-sm">
+                    <li
+                      key={itemIndex}
+                      className="flex items-start gap-2 text-sm"
+                    >
                       <div className="w-1.5 h-1.5 bg-gold-rich rounded-full mt-2 flex-shrink-0" />
                       <span>{item}</span>
                     </li>
@@ -184,19 +227,25 @@ export default function InvestorSection() {
 
         {/* Investment CTAs */}
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 text-center">
-          <h3 className="text-3xl font-bold mb-4">Ready to Invest in Africa's Future?</h3>
+          <h3 className="text-3xl font-bold mb-4">
+            Ready to Invest in Africa's Future?
+          </h3>
           <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-            Join us in revolutionizing African real estate with innovative solutions, 
-            proven expertise, and unlimited market potential.
+            Join us in revolutionizing African real estate with innovative
+            solutions, proven expertise, and unlimited market potential.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" size="xl" className="group">
               <Download className="w-5 h-5 mr-2" />
               Download Investor Deck
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="xl" className="border-white/30 text-white hover:bg-white/10">
+            <Button
+              variant="outline"
+              size="xl"
+              className="border-white/30 text-white bg-white/10 hover:bg-white/20"
+            >
               Schedule Investment Call
             </Button>
           </div>
@@ -205,19 +254,29 @@ export default function InvestorSection() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
                 <div className="text-2xl font-bold text-gold-rich">$6.25B</div>
-                <div className="text-gray-400 text-sm">Annual funding needed to close housing deficit</div>
+                <div className="text-gray-400 text-sm">
+                  Annual funding needed to close housing deficit
+                </div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-african">2025</div>
-                <div className="text-gray-400 text-sm">Target market entry timeline</div>
+                <div className="text-2xl font-bold text-orange-african">
+                  2025
+                </div>
+                <div className="text-gray-400 text-sm">
+                  Target market entry timeline
+                </div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-white">ROI</div>
-                <div className="text-gray-400 text-sm">Strong returns expected</div>
+                <div className="text-gray-400 text-sm">
+                  Strong returns expected
+                </div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-gold-rich">ESG</div>
-                <div className="text-gray-400 text-sm">Sustainable impact investing</div>
+                <div className="text-gray-400 text-sm">
+                  Sustainable impact investing
+                </div>
               </div>
             </div>
           </div>
