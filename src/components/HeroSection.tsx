@@ -80,7 +80,7 @@ export default function HeroSection() {
         {productCategories.map((category, index) => (
           <div
             key={category.id}
-            className="relative cursor-pointer group"
+            className="relative cursor-pointer group transition-all"
             onClick={() => handleCategoryClick(category.link)}
             onMouseEnter={() => setHoveredCategory(category.id)}
             onMouseLeave={() => setHoveredCategory(null)}
@@ -97,7 +97,7 @@ export default function HeroSection() {
 
             {/* Darkening overlay */}
             <div
-              className={`absolute inset-0 bg-black transition-opacity duration-500 ${
+              className={`absolute inset-0 bg-black transition-all duration-300 ${
                 hoveredCategory === category.id
                   ? "bg-opacity-30"
                   : "bg-opacity-60"
