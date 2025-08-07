@@ -12,7 +12,7 @@ export default function TeamSection() {
     description:
       "Visionary leader driving Africa's architectural model-making revolution with over a decade of experience in real estate development.",
     linkedin: "https://www.linkedin.com/in/victor-etim-a28423231/",
-    email: "Victor@vaidhomes.com",
+    email: "victor@vaidhomes.com",
   };
 
   const teamMembers = [

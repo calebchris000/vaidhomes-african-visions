@@ -43,8 +43,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      detail: "Victor@vaidhomes.com",
-      action: "mailto:Victor@vaidhomes.com",
+      detail: "victor@vaidhomes.com",
+      action: "mailto:victor@vaidhomes.com",
     },
     {
       icon: MapPin,
@@ -279,7 +279,7 @@ export default function ContactSection() {
             </Button>
             <Button
               onClick={(e) => {
-                window.open("mailto:Victor@vaidhomes.com");
+                window.open("mailto:victor@vaidhomes.com");
               }}
               variant="outline"
               className="group"

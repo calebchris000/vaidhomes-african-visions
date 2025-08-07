@@ -39,8 +39,8 @@ export default function Footer() {
     { icon: Phone, text: "+234 703 747 6267", href: "tel:+2347037476267" },
     {
       icon: Mail,
-      text: "Victor@vaidhomes.com",
-      href: "mailto:Victor@vaidhomes.com",
+      text: "victor@vaidhomes.com",
+      href: "mailto:victor@vaidhomes.com",
     },
     { icon: MapPin, text: "Lagos, Nigeria", href: "#" },
   ];
