@@ -8,42 +8,25 @@ export default function ServicesOverview() {
       icon: Building2,
       title: "Architectural Models",
       description:
-        "As pioneers, we craft meticulously detailed, visually stunning architectural models, including Banjul's largest city model (2021), to elevate properties and showcase investment potential.",
-      features: [
-        "Landmark City Models (Banjul, 2021)",
-        "High-Fidelity & Visually Stunning",
-        "Driving Property Impact & Sales",
-        "Showcasing Investment Potential",
-      ],
-      image: images.model01,
+        "We specialize in crafting exquisite office building models, bringing to life prestigious projects like our detailed 7-star property office model, meticulously rendered at a precise 1:200 scale.",
+      features: [],
+      image: images.image34,
     },
     {
       icon: Hammer,
       title: "Grand Scale Architectural Models",
       description:
-        "We crafted a monumental, Emirates-inspired architectural model, over 1.65m tall, for a luxury brand client. This ambitious project was brought to life through our unwavering commitment, exceeding all expectations.",
-      features: [
-        "Life-sized Model (>1.65m Tall)",
-        "Emirates-Inspired Grandeur",
-        "Luxury Brand Client Focus",
-        "Unwavering Project Realization",
-        "Exceeded Expectations & Client Satisfaction",
-      ],
-      image: images.model02,
+        "We meticulously crafted the 'Arizon' architectural model for Zylus Group International, scaled at 1:1000 and measuring an impressive 1.5m by 2.4m. This monumental project, brought to life by Vaidhomes and Models, showcases our expertise in delivering large-scale, detailed visualizations.",
+      features: [],
+      image: images.image15,
     },
     {
       icon: Home,
       title: "Master-Planned Community Models",
       description:
-        "We craft expansive, highly detailed master-planned community models that bring complex urban visions to life. Meticulously representing large residential developments with housing, illuminated road networks, and realistic terrain, these models are invaluable tools for planners, developers, and investors, offering immersive visualization of future communities.",
-      features: [
-        "Comprehensive Community Layouts",
-        "Detailed Residential & Infrastructure Design",
-        "Realistic Terrain & Landscaping",
-        "Integrated Illumination for Realism",
-        "Ideal for Urban Planning & Sales Visualization",
-      ],
-      image: images.model18,
+        "Experience our master-planned community models, meticulously crafted to human scale. Standing at 1.5m high and 0.45m wide, these edifices include a 21-storey model in the heart of Bolidon, Lagos, and a 12-storey building from Zenith Street, Victoria Island, Lagos, all tastefully finished for your viewing pleasure.",
+      features: [],
+      image: images.image37,
     },
   ];
 
@@ -78,7 +61,7 @@ export default function ServicesOverview() {
                 {service.description}
               </p>
 
-              <ul className="space-y-2 mb-6">
+              {/*<ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li
                     key={featureIndex}
@@ -88,7 +71,7 @@ export default function ServicesOverview() {
                     {feature}
                   </li>
                 ))}
-              </ul>
+              </ul>*/}
 
               <div className="w-full h-48 bg-muted rounded-xl my-8 mt-12 flex items-center justify-center text-muted-foreground">
                 <img

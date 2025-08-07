@@ -1,5 +1,6 @@
 import { Linkedin, Mail, Award, Calendar } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { images } from "@/assets/images/image";
 
 export default function TeamSection() {
   const founder = {
@@ -20,7 +21,7 @@ export default function TeamSection() {
       role: "Business Development Manager",
       experience: "5+ years",
       specialty: "Client Relations & Market Expansion",
-      image: "",
+      image: images.joshuaEtim,
       linkedin: "",
       email: "",
     },
@@ -164,7 +165,7 @@ export default function TeamSection() {
                     onLoad={(e) => {
                       (e.target as HTMLElement).style.display = "block";
                     }}
-                    src={founder.image}
+                    src={member.image}
                   />
                   <span>
                     {member.name
@@ -206,42 +207,17 @@ export default function TeamSection() {
           ))}
         </div>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              60+
-            </div>
-            <div className="text-muted-foreground">
-              Years Combined Experience
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              6
-            </div>
-            <div className="text-muted-foreground">Core Specialists</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              100%
-            </div>
-            <div className="text-muted-foreground">African Expertise</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-              5+
-            </div>
-            <div className="text-muted-foreground">
-              Professional Disciplines
-            </div>
-          </div>
-        </div>
-
         <div className="text-center mt-16">
           <p className="text-muted-foreground mb-6">
             Ready to work with Africa's leading architectural team?
           </p>
-          <Button variant="cta" size="xl">
+          <Button
+            onClick={() => {
+              window.location.href = "/#contact";
+            }}
+            variant="cta"
+            size="xl"
+          >
             Join Our Mission
           </Button>
         </div>

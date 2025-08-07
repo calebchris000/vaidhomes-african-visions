@@ -2,130 +2,155 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
 All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 220 15% 10%;
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 220 15% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 15% 10%;
+        --card: 0 0% 100%;
+        --card-foreground: 220 15% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 10%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 220 15% 10%;
 
-    /* Professional navy blue primary */
-    --primary: 213 94% 12%;
-    --primary-foreground: 0 0% 98%;
-    --primary-hover: 213 85% 18%;
+        /* Professional navy blue primary */
+        --primary: 213 94% 12%;
+        --primary-foreground: 0 0% 98%;
+        --primary-hover: 213 85% 18%;
 
-    /* Elegant gold accent */
-    --secondary: 43 74% 66%;
-    --secondary-foreground: 220 15% 10%;
+        /* Elegant gold accent */
+        --secondary: 43 74% 66%;
+        --secondary-foreground: 220 15% 10%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 14% 45%;
+        --muted: 220 14% 96%;
+        --muted-foreground: 220 14% 45%;
 
-    /* African-inspired accent */
-    --accent: 25 95% 53%;
-    --accent-foreground: 0 0% 98%;
+        /* African-inspired accent */
+        --accent: 25 95% 53%;
+        --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+        --destructive: 0 84% 60%;
+        --destructive-foreground: 0 0% 98%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 213 94% 12%;
+        --border: 220 13% 91%;
+        --input: 220 13% 91%;
+        --ring: 213 94% 12%;
 
-    --radius: 0.75rem;
+        --radius: 0.75rem;
 
-    /* Custom VaidHomes design tokens */
-    --navy-deep: 213 94% 8%;
-    --navy-light: 213 65% 25%;
-    --gold-rich: 43 84% 58%;
-    --gold-light: 43 64% 78%;
-    --orange-african: 25 95% 53%;
-    --orange-light: 25 75% 73%;
-    
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy-deep)), hsl(var(--navy-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--gold-rich)), hsl(var(--orange-african)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
-    
-    /* Shadows */
-    --shadow-premium: 0 20px 50px -10px hsl(var(--navy-deep) / 0.25);
-    --shadow-card: 0 4px 20px -2px hsl(var(--navy-deep) / 0.1);
-    --shadow-glow: 0 0 40px hsl(var(--gold-rich) / 0.3);
-    
-    /* Animations */
-    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-spring: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Custom VaidHomes design tokens */
+        --navy-deep: 213 94% 8%;
+        --navy-light: 213 65% 25%;
+        --gold-rich: 43 84% 58%;
+        --gold-light: 43 64% 78%;
+        --orange-african: 25 95% 53%;
+        --orange-light: 25 75% 73%;
 
-    --sidebar-background: 0 0% 98%;
+        /* Gradients */
+        --gradient-hero: linear-gradient(
+            135deg,
+            hsl(var(--navy-deep)),
+            hsl(var(--navy-light))
+        );
+        --gradient-accent: linear-gradient(
+            135deg,
+            hsl(var(--gold-rich)),
+            hsl(var(--orange-african))
+        );
+        --gradient-subtle: linear-gradient(
+            180deg,
+            hsl(var(--background)),
+            hsl(var(--muted))
+        );
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+        /* Shadows */
+        --shadow-premium: 0 20px 50px -10px hsl(var(--navy-deep) / 0.25);
+        --shadow-card: 0 4px 20px -2px hsl(var(--navy-deep) / 0.1);
+        --shadow-glow: 0 0 40px hsl(var(--gold-rich) / 0.3);
 
-    --sidebar-primary: 240 5.9% 10%;
+        /* Animations */
+        --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-spring: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-background: 0 0% 98%;
 
-    --sidebar-accent: 240 4.8% 95.9%;
+        --sidebar-foreground: 240 5.3% 26.1%;
 
-    --sidebar-accent-foreground: 240 5.9% 10%;
+        --sidebar-primary: 240 5.9% 10%;
 
-    --sidebar-border: 220 13% 91%;
+        --sidebar-primary-foreground: 0 0% 98%;
 
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+        --sidebar-accent: 240 4.8% 95.9%;
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+        --sidebar-accent-foreground: 240 5.9% 10%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+        --sidebar-border: 220 13% 91%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    .dark {
+        --background: 222.2 84% 4.9%;
+        --foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+        --card: 222.2 84% 4.9%;
+        --card-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+        --popover: 222.2 84% 4.9%;
+        --popover-foreground: 210 40% 98%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+        --primary: 210 40% 98%;
+        --primary-foreground: 222.2 47.4% 11.2%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+        --secondary: 217.2 32.6% 17.5%;
+        --secondary-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
-  }
+        --muted: 217.2 32.6% 17.5%;
+        --muted-foreground: 215 20.2% 65.1%;
+
+        --accent: 217.2 32.6% 17.5%;
+        --accent-foreground: 210 40% 98%;
+
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 210 40% 98%;
+
+        --border: 217.2 32.6% 17.5%;
+        --input: 217.2 32.6% 17.5%;
+        --ring: 212.7 26.8% 83.9%;
+        --sidebar-background: 240 5.9% 10%;
+        --sidebar-foreground: 240 4.8% 95.9%;
+        --sidebar-primary: 224.3 76.3% 48%;
+        --sidebar-primary-foreground: 0 0% 100%;
+        --sidebar-accent: 240 3.7% 15.9%;
+        --sidebar-accent-foreground: 240 4.8% 95.9%;
+        --sidebar-border: 240 3.7% 15.9%;
+        --sidebar-ring: 217.2 91.2% 59.8%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+    * {
+        @apply border-border;
+    }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+    body {
+        @apply bg-background text-foreground;
+    }
+
+    /* Gradient utilities */
+    .bg-gradient-accent {
+        background: var(--gradient-accent);
+    }
+
+    .bg-gradient-hero {
+        background: var(--gradient-hero);
+    }
+
+    .bg-gradient-subtle {
+        background: var(--gradient-subtle);
+    }
 }
