@@ -48,9 +48,10 @@ export default function TeamSection() {
     },
     {
       name: "Joshua Etim",
-      role: "Business Development Manager",
+      role: "Head of Business Development",
       experience: "5+ years",
-      specialty: "Client Relations & Market Expansion",
+      specialty:
+        "Results-driven Business Development Manager with expertise in sales strategy, client relationship management, market expansion, and team leadership to drive revenue growth and build long-term business success.",
       image: images.joshuaEtim,
       linkedin: "",
       email: "",
@@ -179,10 +180,20 @@ export default function TeamSection() {
                 </p>
 
                 <div className="flex justify-center gap-2">
-                  <Button variant="ghost" size="sm" className="p-2">
+                  <Button
+                    style={!member.linkedin ? { display: "none" } : {}}
+                    variant="ghost"
+                    size="sm"
+                    className="p-2"
+                  >
                     <Linkedin className="w-4 h-4" />
                   </Button>
-                  <Button variant="ghost" size="sm" className="p-2">
+                  <Button
+                    style={!member.email ? { display: "none" } : {}}
+                    variant="ghost"
+                    size="sm"
+                    className="p-2"
+                  >
                     <Mail className="w-4 h-4" />
                   </Button>
                 </div>
