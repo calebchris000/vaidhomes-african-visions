@@ -8,7 +8,7 @@ export default function TeamSection() {
     role: "Founder & CEO",
     quote:
       "I started with carton paper from my mother’s provision store. Today, I’m helping build Africa — one model, one home at a time.",
-    image: "[Victor Etim Photo Placeholder]",
+    image: images.victorEtim,
     description:
       "Visionary leader driving Africa's architectural model-making revolution with over a decade of experience in real estate development.",
     linkedin: "https://www.linkedin.com/in/victor-etim-a28423231/",
@@ -17,57 +17,41 @@ export default function TeamSection() {
 
   const teamMembers = [
     {
+      name: "Stephen Stephen",
+      role: "Project Supervisor",
+      experience: "10+ years",
+      specialty:
+        "Experienced project supervisor with over 10 years managing major real estate projects across Nigeria and West Africa. Known for efficiency, smart work, and quality delivery. A valued team asset.",
+      image: images.stephenStephen,
+      linkedin: "",
+      email: "",
+    },
+    {
+      name: "JEREMIAH E. ANEJI",
+      role: "Legal Practitioner",
+      // experience: "10+ years",
+      specialty:
+        "Seasoned legal expert in real estate, corporate law, and finance. Led major legal negotiations, project advisories, and now serves as Managing Partner at Brightins Solicitors and Director Legal at vaidhomes.",
+      image: images.jeremiahAnejif,
+      linkedin: "",
+      email: "",
+    },
+    {
+      name: "Peter Josu",
+      role: "Chief Marketing Officer (CMO)",
+      // experience: "10+ years",
+      specialty:
+        "Peter Josu is a proven sales strategist who led ₦500M+ in real estate revenue through grassroots marketing, team leadership, and relationship-driven brand growth. He trained and mentored a lean team that has already generated ₦100 million in the first half of 2025 alone.",
+      image: images.peterJosu,
+      linkedin: "",
+      email: "",
+    },
+    {
       name: "Joshua Etim",
       role: "Business Development Manager",
       experience: "5+ years",
       specialty: "Client Relations & Market Expansion",
       image: images.joshuaEtim,
-      linkedin: "",
-      email: "",
-    },
-    {
-      name: "Uyime Ekpo",
-      role: "Chief Accountant",
-      experience: "7+ years",
-      specialty: "Financial Management & Strategy",
-      image: "",
-      linkedin: "",
-      email: "",
-    },
-    {
-      name: "Emmanuel Ntia",
-      role: "Senior Civil Engineer",
-      experience: "10+ years",
-      specialty: "Project Supervision & Infrastructure",
-      image: "",
-      linkedin: "",
-      email: "",
-    },
-    {
-      name: "Iwueze Shallon",
-      role: "Surveyor & GIS Analyst",
-      experience: "8+ years",
-      specialty: "Land Surveying & Geospatial Analysis",
-      image: "",
-      linkedin: "",
-      email: "",
-    },
-
-    {
-      name: "Barr. Jeremiah Aneji",
-      role: "Real Estate Attorney",
-      experience: "10+ years",
-      specialty: "Legal Affairs & Property Law",
-      image: "",
-      linkedin: "",
-      email: "",
-    },
-    {
-      name: "Ifiok Okosi",
-      role: "Senior Quantity Surveyor",
-      experience: "15+ years",
-      specialty: "Cost Management & Estimation",
-      image: "",
       linkedin: "",
       email: "",
     },
@@ -97,12 +81,12 @@ export default function TeamSection() {
                   }}
                   src={founder.image}
                 />
-                <span className="font-bold text-6xl">
+                {/*<span className="font-bold text-6xl">
                   {founder.name
                     .split(" ")
                     .map((i) => i.charAt(0).toUpperCase())
                     .join("")}
-                </span>
+                </span>*/}
               </div>
 
               <div className="p-8 md:p-12 flex flex-col justify-center">
@@ -167,12 +151,12 @@ export default function TeamSection() {
                     }}
                     src={member.image}
                   />
-                  <span>
+                  {/*<span>
                     {member.name
                       .split(" ")
                       .map((i) => i.charAt(0).toUpperCase())
                       .join("")}
-                  </span>
+                  </span>*/}
                 </span>
               </div>
 
@@ -187,7 +171,7 @@ export default function TeamSection() {
 
                 <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground mb-3">
                   <Calendar className="w-4 h-4" />
-                  <span>{member.experience} Experience</span>
+                  <span>{member.experience ?? ""} Experience</span>
                 </div>
 
                 <p className="text-sm text-muted-foreground mb-4">

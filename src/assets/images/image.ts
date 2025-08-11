@@ -77,6 +77,10 @@ import image77 from "@/assets/images/image-76.jpeg";
 import image78 from "@/assets/images/image-77.jpeg";
 import image79 from "@/assets/images/image-78.jpeg";
 import joshuaEtim from "@/assets/images/joshua-etim.jpeg";
+import victorEtim from "@/assets/images/victor-etim.png";
+import stephenStephen from "@/assets/images/stephen-stephen.png";
+import jeremiahAnejif from "@/assets/images/Jeremiah-Anejif.png";
+import peterJosu from "@/assets/images/peterjosu.png";
 
 export const images = {
   image2,
@@ -158,4 +162,8 @@ export const images = {
   image78,
   image79,
   joshuaEtim,
+  victorEtim,
+  stephenStephen,
+  jeremiahAnejif,
+  peterJosu,
 };
