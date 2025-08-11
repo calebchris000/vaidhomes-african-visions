@@ -10,7 +10,7 @@ export default function TeamSection() {
       "I started with carton paper from my mother’s provision store. Today, I’m helping build Africa — one model, one home at a time.",
     image: images.victorEtim,
     description:
-      "Visionary leader driving Africa's architectural model-making revolution with over a decade of experience in real estate development.",
+      "Visionary architect and CEO passionate about design. Has led numerous large-scale projects across Nigeria, The Gambia, and Sierra Leone. Known for creativity, dedication, and architectural excellence.",
     linkedin: "https://www.linkedin.com/in/victor-etim-a28423231/",
     email: "victor@vaidhomes.com",
   };
