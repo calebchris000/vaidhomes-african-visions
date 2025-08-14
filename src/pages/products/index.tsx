@@ -26,12 +26,14 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { images } from "@/assets/images/image";
 import { useParams } from "react-router-dom";
+import salome from "@/assets/videos/salome.mp4";
 
 // Data structure interfaces
 interface Project {
   id: string;
   title: string;
   image: string;
+  type?: string;
   description: string;
 }
 
@@ -68,6 +70,13 @@ const categoryData: Record<string, Category> = {
         image: images.image2, // First image for subcategory hero
         projectCount: 6,
         projects: [
+          {
+            id: "office1",
+            title: "Corporate Headquarters Model",
+            image: salome,
+            type: "video",
+            description: "Shopping mall model",
+          },
           {
             id: "office2",
             title: "Business Park Masterplan",
@@ -804,14 +813,24 @@ export default function ProductsPage() {
                     className="block"
                   >
                     <div className="relative overflow-hidden h-60">
-                      <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
+                      {project?.type === "video" ? (
+                        <video
+                          src={salome}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                        ></video>
+                      ) : (
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      )}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-4">
                         <p className="text-white text-center text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
-                          Click to view larger image
+                          Click to view larger
                         </p>
                       </div>
                     </div>
