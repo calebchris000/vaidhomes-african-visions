@@ -69,12 +69,6 @@ const categoryData: Record<string, Category> = {
         projectCount: 6,
         projects: [
           {
-            id: "office1",
-            title: "Corporate Headquarters Model",
-            image: images.image2,
-            description: "Shopping mall model",
-          },
-          {
             id: "office2",
             title: "Business Park Masterplan",
             image: images.image3,
