@@ -27,6 +27,8 @@ import Footer from "@/components/Footer";
 import { images } from "@/assets/images/image";
 import { useParams } from "react-router-dom";
 import salome from "@/assets/videos/salome.mp4";
+import architectureVideo from "@/assets/videos/architectural-models.mp4";
+import fatimaVideo from "@/assets/videos/hero-video.mp4";
 
 // Data structure interfaces
 interface Project {
@@ -72,10 +74,10 @@ const categoryData: Record<string, Category> = {
         projects: [
           {
             id: "office1",
-            title: "Corporate Headquarters Model",
-            image: salome,
+            title: "Tafsalone Micro City Project",
+            image: fatimaVideo,
             type: "video",
-            description: "Shopping mall model",
+            description: "5000 units tafsalone micro city project shot",
           },
           {
             id: "office2",
@@ -764,6 +766,13 @@ const categoryData: Record<string, Category> = {
             description:
               "Showcasing the meticulous planning behind TAF Africa Global's urban expansion, turning forest land into thriving communities while honoring Sierra Leone's unique topography. Model Size: 2400 X 4200. Client: TAF Africa Global. This project is a testament to our industrious team and dedicated service.",
           },
+          {
+            id: "design4",
+            title: "Model Prototype",
+            image: architectureVideo,
+            type: "video",
+            description: "The model prototype progress video",
+          },
         ],
       },
     ],
@@ -815,11 +824,12 @@ export default function ProductsPage() {
                     <div className="relative overflow-hidden h-60">
                       {project?.type === "video" ? (
                         <video
-                          src={salome}
+                          src={project?.image}
                           autoPlay
                           loop
                           muted
                           playsInline
+                          className="-translate-y-0"
                         ></video>
                       ) : (
                         <img
