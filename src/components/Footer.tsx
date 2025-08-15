@@ -42,7 +42,11 @@ export default function Footer() {
       text: "victor@vaidhomes.com",
       href: "mailto:victor@vaidhomes.com",
     },
-    { icon: MapPin, text: "Lagos, Nigeria", href: "#" },
+    {
+      icon: MapPin,
+      text: "6 Oyeshina Close, Jibowu Road, Abule Egba, Lagos",
+      href: "#",
+    },
   ];
 
   const socialLinks = [

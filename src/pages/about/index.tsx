@@ -258,7 +258,7 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white/10"
+                className="border-white bg-accent text-white hover:bg-white/10"
                 onClick={() => {
                   document
                     .querySelector("#contact")
