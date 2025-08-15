@@ -76,7 +76,7 @@ import image76 from "@/assets/images/image-75.jpeg";
 import image77 from "@/assets/images/image-76.jpeg";
 import image78 from "@/assets/images/image-77.jpeg";
 import image79 from "@/assets/images/image-78.jpeg";
-import joshuaEtim from "@/assets/images/joshua-etim.jpeg";
+import joshuaEtim from "@/assets/images/joshuaetim.jpeg";
 import victorEtim from "@/assets/images/victor-etim.png";
 import stephenStephen from "@/assets/images/stephen-stephen.png";
 import jeremiahAnejif from "@/assets/images/Jeremiah-Anejif.png";
