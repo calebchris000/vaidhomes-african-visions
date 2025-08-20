@@ -7,8 +7,20 @@ import InvestorSection from "@/components/InvestorSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import TrustedBy from "@/components/TrustedBy";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      const contactElement = document.querySelector("#contact");
+      if (contactElement) {
+        contactElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div className="min-h-screen bg-background">
       <Navigation />

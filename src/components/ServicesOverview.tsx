@@ -61,18 +61,6 @@ export default function ServicesOverview() {
                 {service.description}
               </p>
 
-              {/*<ul className="space-y-2 mb-6">
-                {service.features.map((feature, featureIndex) => (
-                  <li
-                    key={featureIndex}
-                    className="flex items-center text-sm text-muted-foreground"
-                  >
-                    <div className="w-1.5 h-1.5 bg-orange-african rounded-full mr-3" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>*/}
-
               <div className="w-full h-48 bg-muted rounded-xl my-8 mt-12 flex items-center justify-center text-muted-foreground">
                 <img
                   style={{ filter: "contrast(140%)" }}
@@ -82,7 +70,15 @@ export default function ServicesOverview() {
                 />
               </div>
 
-              <Button variant="outline" className="group w-full">
+              <Button
+                onClick={() => {
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+                variant="outline"
+                className="group w-full"
+              >
                 Learn More
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>

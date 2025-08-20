@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function ProjectShowcase() {
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState("w");
   const navigate = useNavigate();
 
   const filters = [

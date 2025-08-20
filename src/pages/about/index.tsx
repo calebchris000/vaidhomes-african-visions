@@ -12,7 +12,7 @@ import {
   Heart,
   Shield,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -25,6 +25,7 @@ import TeamSection from "@/components/TeamSection";
 import { images } from "@/assets/images/image";
 
 export default function AboutPage() {
+  const navigate = useNavigate();
   const stats = [
     { value: "15+", label: "Years of Excellence" },
     { value: "100+", label: "Projects Completed" },
@@ -260,9 +261,7 @@ export default function AboutPage() {
                 variant="outline"
                 className="border-white bg-accent text-white hover:bg-white/10"
                 onClick={() => {
-                  document
-                    .querySelector("#contact")
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  navigate("/", { state: { scrollToContact: true } });
                 }}
               >
                 Contact Us
