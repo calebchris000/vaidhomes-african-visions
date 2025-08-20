@@ -116,7 +116,7 @@ export default function HeroSection() {
 
       {/* Hero Content */}
       <div className="relative select-none z-10 flex flex-col justify-center items-center min-h-screen px-4 text-center pointer-events-none">
-        <div className="max-w-4xl mx-auto mt-32">
+        <div className="max-w-4xl mx-auto mt-32 max-md:hidden">
           <h1 className="text-4xl font-bold text-white mb-4 leading-tight">
             We Build the Future of{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
