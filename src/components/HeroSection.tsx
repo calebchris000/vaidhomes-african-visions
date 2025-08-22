@@ -130,29 +130,30 @@ export default function HeroSection() {
             purpose.
           </p>
 
-          {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Button
               onClick={() => navigate("/products")}
               variant="hero"
               size="xl"
-              className="group"
+              className="group pointer-events-auto"
             >
               View Our Portfolio
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
               onClick={(e) => {
+                console.log("Click");
                 e.preventDefault();
+                e.stopPropagation();
                 document
                   .querySelector("#contact")
                   ?.scrollIntoView({ behavior: "smooth" });
               }}
               variant="premium"
               size="xl"
-              className="group"
+              className="group pointer-events-auto"
             >
-              <Play className="w-5 h-5 mr-2" />
+              <Play className="w-5 h-5 group-hover:translate-x-1 transition-transform mr-2" />
               Start Your Project
             </Button>
           </div>

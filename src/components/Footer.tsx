@@ -36,16 +36,23 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: Phone, text: "+234 703 747 6267", href: "tel:+2347037476267" },
+    {
+      icon: Phone,
+      text: "+234 703 747 6267",
+      href: "+2347037476267",
+      type: "whatsapp",
+    },
     {
       icon: Mail,
       text: "info@vaidhomes.com",
       href: "mailto:info@vaidhomes.com",
+      type: "email",
     },
     {
       icon: MapPin,
       text: "6 Oyeshina Close, Jibowu Road, Abule Egba, Lagos",
       href: "#",
+      type: "address",
     },
   ];
 
@@ -128,13 +135,19 @@ export default function Footer() {
             <ul className="space-y-4">
               {contactInfo.map((contact, index) => (
                 <li key={index}>
-                  <a
-                    href={contact.href}
-                    className="flex items-center gap-3 text-gray-300 hover:text-gold-rich transition-colors duration-300 group"
+                  <button
+                    onClick={() => {
+                      if (contact.type === "email") {
+                        window.open(`mailto:${contact.href}`);
+                      } else if (contact.type === "whatsapp") {
+                        window.open(`https://wa.me/${contact.href}`);
+                      }
+                    }}
+                    className="flex text-start items-center gap-3 text-gray-300 hover:text-gold-rich transition-colors duration-300 group"
                   >
                     <contact.icon className="w-5 h-5 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <span className="text-sm">{contact.text}</span>
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
