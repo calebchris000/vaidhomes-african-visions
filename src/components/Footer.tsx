@@ -39,8 +39,8 @@ export default function Footer() {
     { icon: Phone, text: "+234 703 747 6267", href: "tel:+2347037476267" },
     {
       icon: Mail,
-      text: "victor@vaidhomes.com",
-      href: "mailto:victor@vaidhomes.com",
+      text: "info@vaidhomes.com",
+      href: "mailto:info@vaidhomes.com",
     },
     {
       icon: MapPin,

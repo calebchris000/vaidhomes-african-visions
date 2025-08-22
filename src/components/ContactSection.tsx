@@ -38,7 +38,7 @@ export default function ContactSection() {
       icon: Phone,
       title: "Phone",
       detail: "+234 703 747 6267",
-      action: "tel:+2347037476267",
+      action: "https://wa.me/2347037476267",
     },
     {
       icon: Mail,
@@ -269,7 +269,7 @@ export default function ContactSection() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               onClick={(e) => {
-                window.open("tel:+2347037476267");
+                window.open("https://wa.me/2347037476267");
               }}
               variant="outline"
               className="group"
