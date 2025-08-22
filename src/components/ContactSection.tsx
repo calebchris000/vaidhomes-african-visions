@@ -43,8 +43,8 @@ export default function ContactSection() {
     {
       icon: Mail,
       title: "Email",
-      detail: "victor@vaidhomes.com",
-      action: "mailto:victor@vaidhomes.com",
+      detail: "info@vaidhomes.com",
+      action: "mailto:info@vaidhomes.com",
     },
     {
       icon: MapPin,

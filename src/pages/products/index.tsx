@@ -218,20 +218,7 @@ const categoryData: Record<string, Category> = {
             description:
               "An expansive overview of the Arizon Estate layout, crafted by Vaidhomes for Zylus Group International. Scale 1:1000, Size 1.5m by 2.4m.",
           },
-          {
-            id: "urban4",
-            title: "Arizon Estate Infrastructure Planning",
-            image: images.image21,
-            description:
-              "Detailed planning model of Arizon Estate's infrastructure, by Vaidhomes for Zylus Group International. Scale 1:1000, Size 1.5m by 2.4m.",
-          },
-          {
-            id: "urban5",
-            title: "Marriott Hotel Ikeja Model - Exterior View",
-            image: images.image22,
-            description:
-              "Scale 1:200. Size: 0.45m by 0.6m. Don't say you've never visited Marriott Hotels, because you just did! This is their standard and exact representation of Marriott Hotels Ikeja Lagos, proudly modeled by Vaidhomes and Models Ltd.",
-          },
+
           {
             id: "urban6",
             title: "Marriott Hotel Ikeja Model - Detailed Perspective",
@@ -264,20 +251,6 @@ const categoryData: Record<string, Category> = {
         image: images.image26, // Subcategory hero image
         projectCount: 10,
         projects: [
-          {
-            id: "land1",
-            title: "Marriott Hotels Ikeja Lagos Model",
-            image: images.image26,
-            description:
-              "Scale 1:200. Size: 0.45m by 0.6m. Don't say you've never visited Marriott Hotels, because you just did! This is their standard and exact representation of Marriott Hotels Ikeja Lagos, proudly modeled by Vaidhomes and Models Ltd.",
-          },
-          {
-            id: "land2",
-            title: "Marriott Hotels Ikeja Lagos Model",
-            image: images.image27,
-            description:
-              "Scale 1:200. Size: 0.45m by 0.6m. Don't say you've never visited Marriott Hotels, because you just did! This is their standard and exact representation of Marriott Hotels Ikeja Lagos, proudly modeled by Vaidhomes and Models Ltd.",
-          },
           {
             id: "land3",
             title: "Marriott Hotels Ikeja Lagos Model",
@@ -320,13 +293,7 @@ const categoryData: Record<string, Category> = {
             description:
               "Scale model (1:200) highlighting the intricate facade details of the 7-star office property.",
           },
-          {
-            id: "land9",
-            title: "7 Star Property Office Project - Lobby Interior",
-            image: images.image34,
-            description:
-              "Scale model (1:200) providing a glimpse into the luxurious lobby interior of the 7-star office property.",
-          },
+
           {
             id: "land10",
             title: "7 Star Property Office Project - Aerial Overview",
@@ -666,13 +633,7 @@ const categoryData: Record<string, Category> = {
             description:
               "Scale 1:200. Size 0.500m by 0.600m. An 11-storey residential project model for Levitikal Realities, crafted by Vaidhomes.",
           },
-          {
-            id: "intrend2",
-            title: "Levitikal Realities Residential Model - Aerial View",
-            image: images.image69,
-            description:
-              "Scale 1:200. Size 0.500m by 0.600m. Aerial overview of the 11-storey residential project for Levitikal Realities.",
-          },
+
           {
             id: "intrend3",
             title: "Levitikal Realities Residential Model - Front Facade",
@@ -738,13 +699,6 @@ const categoryData: Record<string, Category> = {
         projectCount: 4,
         projects: [
           {
-            id: "design1",
-            title: "Meridian tower model by vaidhomes Ltd",
-            image: images.image76,
-            description:
-              "Scale 1:400 Size : height 1.5m width 0.300 Meridian tower model by vaidhomes Ltd",
-          },
-          {
             id: "design2",
             title:
               "TAF Africa Global Urban Transformation - Masterplan Overview",
@@ -759,13 +713,7 @@ const categoryData: Record<string, Category> = {
             description:
               "Detailing the seamless integration of Sierra Leone's natural mountains and water bodies into the TAF Africa Global urban project, highlighting the respectful and innovative design approach. Model Size: 2400 X 4200. Client: TAF Africa Global. This project is a testament to our industrious team and dedicated service.",
           },
-          {
-            id: "design4",
-            title: "TAF Africa Global Urban Expansion - Community Planning",
-            image: images.image79,
-            description:
-              "Showcasing the meticulous planning behind TAF Africa Global's urban expansion, turning forest land into thriving communities while honoring Sierra Leone's unique topography. Model Size: 2400 X 4200. Client: TAF Africa Global. This project is a testament to our industrious team and dedicated service.",
-          },
+
           {
             id: "design4",
             title: "Model Prototype",
